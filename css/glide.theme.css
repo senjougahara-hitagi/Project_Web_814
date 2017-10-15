@@ -2,7 +2,7 @@
   position: absolute;
 }
 .glide--horizontal .glide__arrows {
-  top: 50%;
+  top: 43%;
   width: 92%;
   margin-left: 4%;
 }
@@ -14,7 +14,7 @@
 .glide__arrow {
   position: absolute;
   z-index: 2;
-  color: white;
+  color: grey;
   text-transform: uppercase;
   font: 11px Arial, sans-serif;
   padding: 9px 12px;
@@ -39,10 +39,10 @@
           transform: translateY(-50%);
 }
 .glide--horizontal .glide__arrow.prev {
-  left: 0;
+  left: 270px;
 }
 .glide--horizontal .glide__arrow.next {
-  right: 0;
+  right: 270px;
 }
 .glide--vertical .glide__arrow {
   -webkit-transform: translateX(-50%);

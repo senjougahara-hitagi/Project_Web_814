@@ -76,7 +76,6 @@ p {
     top: 50%;
     transform: translateY(-50%);
     right:200px;
-    font-size: 16px;
 
 }
 .header .menu ul li {
@@ -84,6 +83,11 @@ p {
 }
 .header .menu ul li a {
     color: #000;
+    font-family: "brandon-grotesque",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 .header .search-box, .header .order-box {
     position: absolute;
@@ -96,7 +100,7 @@ p {
     right: 50px;
 }
 .header .order-box {
-    right: 0px;
+    right: 0;
 }
 
 
@@ -173,6 +177,7 @@ p {
 /*best-selling content*/
 .content {
     width: 100%;
+    max-height: 100vh;
 
 }
 .content.best-sell {
