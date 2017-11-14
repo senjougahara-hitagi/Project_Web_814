@@ -22,49 +22,57 @@
 
       <!-- Main style -->
       <link rel="stylesheet" href="css/main.css">
+
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/prefixfree.min.js"></script>
+      <script src="js/glide.min.js"></script>
+      <script src="js/main.js"></script>
+      <script type="text/javascript" src="js/handlebars.js"></script>
   </head>
 
   <body>
     <?php
       include("php/db_conn.php");
+      include("php/config.php")
     ?>
     <!--Header-->
     <header class="header">
         <div class="over-lay">
-                <div >
-                    <!--logo-->
-                    <div class="big-logo">
-                        <a href="index.php">
-                            <img src="img/logo.png">
-                            <span id="name">5 Birds</span>
-                            <span>Shop</span>
-                            <sup>tm</sup>
-                        </a>
-                    </div>
-                    <!--menu-->
-                    <div class="menu">
-                        <ul class="list-inline">
-                            <li><a href="#">Page 1 </a></li>
-                            <li><a href="#">Page 2</a></li>
-                            <li><a href="#">Page 3</a></li>
-                            <li><a href="#">Page 4</a></li>
-                            <li><a href="#">Page 5</a></li>
-                            <li><a href="#">Page 6</a></li>
-                        </ul>
-                    </div>
+          <div >
+              <!--logo-->
+              <div class="big-logo">
+                  <a href="index.php">
+                      <img src="img/logo.png">
+                      <span id="name">5 Birds</span>
+                      <span>Shop</span>
+                      <sup>tm</sup>
+                  </a>
+              </div>
+              <!--menu-->
+              <div class="menu">
+                  <ul class="list-inline">
+                      <li><a href="#">Page 1 </a></li>
+                      <li><a href="#">Page 2</a></li>
+                      <li><a href="#">Page 3</a></li>
+                      <li><a href="#">Page 4</a></li>
+                      <li><a href="#">Page 5</a></li>
+                      <li><a href="#">Page 6</a></li>
+                  </ul>
+              </div>
 
-                    <!--Search-box-->
-                    <div class="search-box">
-                        <i class="fa fa-search"></i>
-
-                    </div>
-                    <!--order-check-->
-                    <div class="order-box">
-                        <i class="fa fa-shopping-cart"></i>
-
-                    </div>
-
+              <!--Search-box-->
+              <div class="search-box">
+                  <i class="fa fa-search"></i>
+              </div>
+              <!--order-check-->
+              <a href="cart.php">
+                <div class="order-box">
+                    <i class="fa fa-shopping-cart"></i>
+                    <input type="button" id="total_items" value="">
                 </div>
+              </a>
+          </div>
         </div>
     </header>
 
@@ -107,35 +115,10 @@
         <div class="over-lay">
             <div class="container">
                 <h2>
-                    Best Selling / Trend
+                    Best Selling
                 </h2>
                 <div class="row">
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
+                  <?php include("php/bestsell.php"); ?>
                 </div>
             </div>
         </div>
@@ -147,20 +130,6 @@
                 <h2>
                     New
                 </h2>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="item"></div>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="item"></div>
@@ -199,27 +168,25 @@
                     <div class="item"></div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="item"></div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item"></div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item"></div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="item"></div>
-                </div>
-            </div>
         </div>
       </div>
     </div>
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/prefixfree.min.js"></script>
-    <script src="js/glide.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- modal-->
+    <div class="modal fade" id="item_modal" tabindex="-1" role="dialog" aria-labelledby="item_modal_label">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body" id="item_modal_body">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <?php
+      include("php/product_modal.php");
+      include("php/cart_modal.php");
+    ?>
+
   </body>
 </html>

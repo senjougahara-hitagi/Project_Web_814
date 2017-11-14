@@ -1,0 +1,32 @@
+.cart-main {
+  position: fixed;
+  margin: 40vh 20vh 0vh 20vh;
+}
+.cart-main .cart-products-list {
+  float: left;
+}
+.cart-main .cart-order-summary {
+  float: right;
+  padding-left: 20px;
+}
+.cart-main .cart-products-list #tableheader td {
+  font-size: 27px;
+}
+.cart-main .cart-products-list .width_15 {
+  width: 15%;
+}
+.cart-main .cart-products-list .width_20 {
+  width: 20%;
+}
+.cart-main .cart-products-list .width_40 {
+  width: 40%;
+}
+.cart-main .cart-products-list #tableheader #total_items {
+  border: none;
+  background: transparent;
+  width: 20px;
+}
+.cart-main .cart-order-summary .cart-summary h5{
+  margin: 0px;
+  font-size: 27px;
+}
