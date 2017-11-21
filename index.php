@@ -66,12 +66,10 @@
                   <i class="fa fa-search"></i>
               </div>
               <!--order-check-->
-              <a href="cart.php">
-                <div class="order-box">
-                    <i class="fa fa-shopping-cart"></i>
-                    <input type="button" id="total_items" value="">
-                </div>
-              </a>
+              <div class="order-box">
+                  <i class="fa fa-shopping-cart"></i>
+                  <input type="button" id="total_items" value="">
+              </div>
           </div>
         </div>
     </header>
